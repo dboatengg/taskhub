@@ -15,8 +15,9 @@ if (!isset($_SESSION['user_id'])) {
 
 <body>
     <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+    <p><a href="tasks/list.php">Go to My Tasks</a></p>
 
-    <p>You are now logged in 🚀</p>
+    <p>You are now logged in!</p>
 
     <a href="../controllers/logout_controller.php">Logout</a>
 </body>
