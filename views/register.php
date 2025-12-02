@@ -14,7 +14,7 @@ $message = $_GET['message'] ?? "";
 </head>
 <body>
 
-<div class="container container-layout">
+<div class="container-layout">
     <div class="card">
 
         <h2>Create an Account</h2>

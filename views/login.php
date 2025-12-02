@@ -6,7 +6,7 @@ $message = $_GET['message'] ?? "";
 <html>
 <head>
     <title>Login</title>
-    
+
     <link rel="stylesheet" href="../public/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/style.css">
@@ -14,7 +14,7 @@ $message = $_GET['message'] ?? "";
 </head>
 <body>
 
-<div class="container">
+<div class="container-layout">
     <div class="card">
 
         <h2>Login</h2>
@@ -39,7 +39,9 @@ $message = $_GET['message'] ?? "";
 
         <p class="footer-text">
             Don’t have an account?  
-            <a href="register.php">Register</a>
+            <a href="register.php">Register</a><br>
+            <a href="forgot_password.php">Forgot Password?</a>
+
         </p>
 
     </div>
