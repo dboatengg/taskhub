@@ -87,7 +87,9 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             <div class="actions">
                 <a href="edit.php?id=<?php echo $task['id']; ?>">Edit</a>
-                <a href="../../controllers/tasks_controller.php?action=delete&id=<?php echo $task['id']; ?>">Delete</a>
+                <!-- <a href="../../controllers/tasks_controller.php?action=delete&id=<?php echo $task['id']; ?>">Delete</a> -->
+                <a href="delete.php?id=<?php echo $task['id']; ?>" style="color:#e03131;">Delete</a>
+
             </div>
         </div>
     <?php endforeach; ?>
