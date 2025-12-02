@@ -1,0 +1,226 @@
+/* ---------------------------------------------------
+    GLOBAL RESET / DEFAULTS
+--------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f5f6fa;
+  color: #333;
+  overflow-y: auto;
+}
+/* .container-layout {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  height: 100vh;
+} */
+.container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 650px;
+}
+.container-layout {
+  min-height: 100vh; /* full screen height */
+  display: flex; /* center using flexbox */
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
+  padding: 40px 20px; /* padding for small screens */
+}
+
+.container-layout .back-btn {
+  align-self: flex-start; /* keep back button on top-left */
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 12px;
+  color: #333;
+}
+
+.footer-text a {
+  color: #4c6ef5;
+  text-decoration: none;
+  font-weight: bold;
+}
+.back-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #4c6ef5;
+}
+/* ---------------------------------------------------
+    GLOBAL CARD
+--------------------------------------------------- */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  width: 100%;
+  max-width: 450px;
+  margin: 40px auto;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.6s ease;
+}
+
+/* ---------------------------------------------------
+    GLOBAL TITLES
+--------------------------------------------------- */
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------
+    GLOBAL FORMS
+--------------------------------------------------- */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4c6ef5;
+  box-shadow: 0px 0px 6px rgba(76, 110, 245, 0.6);
+}
+
+/* ---------------------------------------------------
+    GLOBAL BUTTONS
+--------------------------------------------------- */
+button,
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 18px;
+  background: #4c6ef5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+  background: #364fc7;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.message {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.error {
+  background: #ffe3e3;
+  color: #c92a2a;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ---------------------------------------------------
+    LINKS
+--------------------------------------------------- */
+a {
+  color: #4c6ef5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------
+    PAGE CONTAINER
+--------------------------------------------------- */
+.page {
+  padding: 20px;
+}
+
+/* ---------------------------------------------------
+    ANIMATIONS
+--------------------------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------------------------
+        RESPONSIVE CODE
+------------------------------ */
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+    max-width: 90%;
+    border-radius: 10px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  .card {
+    padding: 18px;
+    max-width: 95%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 12px;
+  }
+}

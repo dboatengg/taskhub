@@ -21,17 +21,6 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>My Tasks</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f6fa;
-            padding: 20px;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
         .task-container {
             max-width: 700px;
             margin: auto;
@@ -69,6 +58,10 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
             text-decoration: none;
         }
     </style>
+
+        <link rel="stylesheet" href="../../public/css/style.css">
+        <link rel="stylesheet" href="../public/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
