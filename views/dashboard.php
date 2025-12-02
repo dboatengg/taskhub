@@ -23,7 +23,12 @@ $completedTasks = $stmt->fetch(PDO::FETCH_ASSOC)['completed'];
 $pendingTasks = $totalTasks - $completedTasks;
 
 // Profile picture (will be empty for now)
-$profilePicture = $_SESSION['profile_picture'] ?? "default.png";
+// $profilePicture = $_SESSION['profile_picture'] ?? "default.png";
+$sql = "SELECT profile_picture FROM users WHERE id = :uid";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([':uid' => $_SESSION['user_id']]);
+$profilePicture = $stmt->fetchColumn() ?: "default.png";
+
 ?>
 
 <!DOCTYPE html>
