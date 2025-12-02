@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$db   = "mytaskhub";
+$db   = "taskhub";
 $user = "root";
 $pass = "";
 
