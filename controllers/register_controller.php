@@ -19,7 +19,7 @@ $stmt->execute([':email' => $email]);
 $existing = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($existing) {
-    header("Location: ../views/register.php?message=Email already in use");
+    header("Location: ../views/register.php?message=Email already exists");
     exit;
 }
 
