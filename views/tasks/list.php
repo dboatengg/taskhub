@@ -30,12 +30,46 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
             padding: 0 20px;
         }
 
-        .header-row {
+        /* .header-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 35px;
-        }
+        } */
+
+            .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    flex-wrap: wrap;            /* allows wrapping on smaller screens */
+    gap: 16px;                  /* spacing when wrapped */
+}
+
+.header-row h2 {
+    margin: 0;
+}
+
+/* On small screens, stack vertically */
+@media (max-width: 600px) {
+    .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-row > div {
+        width: 100%;            /* buttons stretch full width */
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .header-row a.btn {
+        width: auto;           
+    }
+}
+
 
         .header-row h2 {
             font-size: 28px;
@@ -160,10 +194,25 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <div class="task-wrapper">
 
-    <div class="header-row">
+    <!-- <div class="header-row">
         <h2>Your Tasks</h2>
         <a href="create.php" class="btn" style="width:auto;">+ Add Task</a>
+    </div> -->
+
+    <div class="header-row">
+    <h2>Your Tasks</h2>
+
+    <div style="display:flex; gap:12px;">
+        <a href="../dashboard.php" class="btn" style="width:auto; background:#e4e6eb; color:#1e1e24;">
+            ← Dashboard
+        </a>
+
+        <a href="create.php" class="btn" style="width:auto;">
+            + Add Task
+        </a>
     </div>
+</div>
+
 
     <?php if (empty($tasks)): ?>
         <p class="empty-state">No tasks yet. Start by creating one.</p>
