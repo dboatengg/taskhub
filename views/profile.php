@@ -23,11 +23,18 @@ $message = $_GET['message'] ?? "";
 <html>
 <head>
     <title>Profile Settings</title>
+    <a href="dashboard.php" 
+   class="btn" 
+   style="margin-top:10px; margin-bottom:20px; display:inline-block; background:#e4e6eb; color:#1e1e24;">
+    ← Back to Dashboard
+</a>
+
     <link rel="stylesheet" href="../public/css/style.css">
 
     <style>
         .profile-container {
             max-width: 600px;
+            width: 90%;
             margin: 40px auto;
             padding: 25px;
             background: white;

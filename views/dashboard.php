@@ -41,6 +41,7 @@ $profilePicture = $stmt->fetchColumn() ?: "default.png";
         .dashboard-wrapper {
             max-width: 900px;
             margin: 40px auto;
+            padding: 0 20px;
         }
 
         .profile-card {
