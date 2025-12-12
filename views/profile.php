@@ -22,12 +22,10 @@ $message = $_GET['message'] ?? "";
 <!DOCTYPE html>
 <html>
 <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Settings</title>
-    <a href="dashboard.php" 
-   class="btn" 
-   style="margin-top:10px; margin-bottom:20px; display:inline-block; background:#e4e6eb; color:#1e1e24;">
-    ← Back to Dashboard
-</a>
+
 
     <link rel="stylesheet" href="../public/css/style.css">
 
@@ -71,7 +69,10 @@ $message = $_GET['message'] ?? "";
 </head>
 
 <body>
-
+    <a href="dashboard.php" class="btn" 
+   style="margin-top:10px; margin-bottom:20px; display:inline-block; background:#e4e6eb; color:#1e1e24;">
+    ← Back to Dashboard
+</a>
 <div class="profile-container">
 
     <h2>Profile Settings</h2>

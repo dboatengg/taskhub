@@ -31,6 +31,7 @@ if (!password_verify($password, $user['password'])) {
 }
 
 // 6. If password is correct → create a session
+session_regenerate_id(true);
 $_SESSION['user_id'] = $user['id'];
 $_SESSION['username'] = $user['username'];
 
